@@ -82,33 +82,23 @@
     <div class="container is-max-desktop">
       <div class="columns is-centered">
         <div class="column has-text-centered">
-          <h1 class="title is-1 publication-title">GF-NeRF:<br> Global-guided Focal Neural Radiance Field for Large-scale Scene Rendering</h1>
-          <h2 class="title is-4 publication-title"> WACV 2025</h2>
+          <h1 class="title is-1 publication-title">🎨MVPainter<br> Accurate and Detailed 3D Texture Generation via Multi-View Diffusion with Geometric Control</h1>
           <div class="is-size-5 publication-authors">
             <span class="author-block">
-              <a href="https://shaomq2187.github.io/GF-NeRF/">Mingqi Shao</a><sup>1,2</sup>,</span>
+              <a href="https://shaomq2187.github.io/GF-NeRF/">Mingqi Shao</a>,</span>
             <span class="author-block">
-              <a href="https://shaomq2187.github.io/GF-NeRF/">Feng Xiong</a><sup>2</sup>,</span>
+              <a href="https://shaomq2187.github.io/GF-NeRF/">Feng Xiong</a></sup>,</span>
             <span class="author-block">
-              <a href="https://shaomq2187.github.io/GF-NeRF/">Hang Zhang</a><sup>2</sup>,
+              <a href="https://shaomq2187.github.io/GF-NeRF/">Zhaoxu Sun</a></sup>,
             </span>
             <span class="author-block">
-              <a href="https://shaomq2187.github.io/GF-NeRF/">Shuang Yang</a><sup>2</sup>,
+              <a href="https://shaomq2187.github.io/GF-NeRF/">Mu Xu</a></sup>,
             </span>
-            <span class="author-block">
-              <a href="https://shaomq2187.github.io/GF-NeRF/">Mu Xu</a><sup>2</sup>,
-            </span>
-            <span class="author-block">
-              <a href="https://shaomq2187.github.io/GF-NeRF/">Wei Bian</a><sup>2</sup>,
-            </span>
-            <span class="author-block">
-              <a href="https://shaomq2187.github.io/GF-NeRF/">Xueqian Wang</a><sup>1</sup>
-            </span>
+
           </div>
 
           <div class="is-size-5 publication-authors">
-            <span class="author-block"><sup>1</sup>Tsinghua Shenzhen International Graduate School</span> 
-            <span class="author-block"><sup>2</sup>AMAP</span>
+            <span class="author-block"></sup>AMAP</span>
           </div>
 
           <div class="column has-text-centered">
@@ -180,7 +170,7 @@
 <section class="hero teaser">
   <div class="container is-max-desktop">
     <div class="hero-body">
-      <img src="./static/images/overview.png" >
+      <img src="./static/images/teaser.png" >
     </img>
 
 
@@ -188,7 +178,6 @@
         <source src="./static/videos/teaser.mp4"
                 type="video/mp4">
       </video> -->
-      Framework of MV-Painter. 
       <h2 class="subtitle has-text-centered">
       </h2>
     </div>
@@ -208,7 +197,7 @@
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           <p>
-            Neural radiance fields~(NeRF) have recently been applied to render large-scale scenes. However, their limited model capacity typically results in blurred rendering results. Existing large-scale NeRFs primarily address this limitation by partitioning the scene into blocks, which are subsequently handled by separate sub-NeRFs. These sub-NeRFs, trained from scratch and processed independently, lead to inconsistencies in geometry and appearance across the scene. Consequently, the rendering quality fails to exhibit significant improvement despite the expansion of model capacity. In this work, we present global-guided focal neural radiance field (GF-NeRF) that achieves high-fidelity rendering of large-scale scenes. Our proposed GF-NeRF utilizes a two-stage (Global and Focal) architecture and a global-guided training strategy. The global stage obtains a continuous representation of the entire scene while the focal stage decomposes the scene into multiple blocks and further processes them with distinct sub-encoders. Leveraging this two-stage architecture, sub-encoders only need fine-tuning based on the global encoder, thus reducing training complexity in the focal stage while maintaining scene-wide consistency. Spatial information and error information from the global stage also benefit the sub-encoders to focus on crucial areas and effectively capture more details of large-scale scenes. Notably, our approach does not rely on any prior knowledge about the target scene, attributing GF-NeRF adaptable to various large-scale scene types, including street-view and aerial-view scenes. We demonstrate that our method achieves high-fidelity, natural rendering results on various types of large-scale datasets.
+            Recently, significant advances have been made in 3D object generation. Building upon the generated geometry, current pipelines typically employ image diffusion models to generate multi-view RGB images, followed by UV texture reconstruction through texture baking. While 3D geometry generation has matured significantly, supported by multiple open-source frameworks, 3D texture generation remains underexplored. In this work, we systematically investigate 3D texture generation through the lens of three core dimensions: reference-texture alignment, geometry-texture consistency, and local texture quality. To tackle these issues, we propose MVPainter, which employs data filtering and augmentation strategies to enhance texture fidelity and detail, and introduces ControlNet-based geometric conditioning to improve texture-geometry alignment. Furthermore, we extract physically-based rendering (PBR) attributes from the generated views to produce PBR meshes suitable for real-world rendering applications. MVPainter achieves state-of-the-art results across all three dimensions, as demonstrated by human-aligned evaluations. To facilitate further research and reproducibility, we also release our full pipeline as an open-source system, including data construction, model architecture, and evaluation tools.
           </p>
         </div>
       </div>
@@ -216,39 +205,67 @@
     <!--/ Abstract. -->
   </div>
 </section>
-<section class="hero is-light ">
-    <div class="container is-centered has-text-centered">
-  <h2 class="title is-3">Videos</h2>
-  </div>
 
-  <video controls style="display: block; margin: 0 auto; width: 50%;" poster="" id="block-small" controls muted loop playsinline >
-    <source src="./static/videos/rubble.mp4"
-            type="video/mp4">
-  </video>
-  <video controls style="display: block; margin: 0 auto; width: 50%;" poster="" id="block-small" controls muted loop playsinline >
-    <source src="./static/videos/waymo.mp4"
-            type="video/mp4">
-  </video>
-  <video controls style="display: block; margin: 0 auto; width: 50%;" poster="" id="block-small" controls muted loop playsinline >
-    <source src="./static/videos/block-small.mp4"
-            type="video/mp4">
-  </video>
-</section>
 
 <section class="section">
   <div class="container is-max-desktop">
+    <!-- Abstract. -->
     <div class="columns is-centered has-text-centered">
-      <!-- Compare Aerial Baselines -->
-      <div class="column">
-        <div class="content">
-          <h2 class="title is-3">Aerial Comparison</h2>
-          <img  style="max-width:100%;height: auto;"src="./static/images/aerial.png" >
-        </img>
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Method</h2>
+        <div class="content has-text-justified">
+          <p>
+            At present, mainstream texture generation methods usually use 2D image diffusion models to generate RGB images\cite{bensadoun2024meta,huang2024mv,zhao2025hunyuan3d}, and then map them to 3D surfaces through a projection strategy. However, three core challenges remain unresolved in current approaches: (1)Reference-texture alignment — it is difficult to ensure that the generated texture accurately reflects the visual characteristics of the reference image, especially under varying lighting and occlusions; (2) Geometry-texture consistency — aligning textures precisely with the 3D surface remains challenging; (3) Local texture quality — many methods struggle to produce textures with sufficient details.
+    
+            Below is the framework of MV-Painter. First, we apply data filtering and augmentation strategies to ensure that the training data contains sufficient detail and variations in lighting and viewpoint. Then, we leverage a ControlNet-based architecture to generate multi-view texture images that are structurally consistent with the 3D geometry. Finally, we introduce a dedicated PBR extraction module to estimate the basecolor, metallic, and roughness maps, which are projected back onto the 3D mesh to obtain a PBR-textured model.
+          </p>
         </div>
       </div>
-      <!--/ Compare Aerial Baselines. -->
+    </div>
+    <div class="hero-body">
+      <img src="./static/images/overview.png" >
+    </img>
+        <h2 class="subtitle has-text-centered">
+    <!--/ Abstract. -->
   </div>
 </section>
+
+
+
+
+<section class="hero is-light ">
+    <div class="container is-centered has-text-centered">
+  <h2 class="title is-3">Baked Texture Generation</h2>
+  </div>
+
+  <video controls style="display: block; margin: 0 auto; width: 50%;" poster="" id="block-small" controls muted loop playsinline >
+    <source src="./static/videos/part_1.mp4"
+            type="video/mp4">
+  </video>
+  <video controls style="display: block; margin: 0 auto; width: 50%;" poster="" id="block-small" controls muted loop playsinline >
+    <source src="./static/videos/part_2.mp4"
+            type="video/mp4">
+  </video>
+
+</section>
+
+
+<section class="hero is-light ">
+  <div class="container is-centered has-text-centered">
+<h2 class="title is-3">PBR Texture Generation</h2>
+</div>
+
+<video controls style="display: block; margin: 0 auto; width: 50%;" poster="" id="block-small" controls muted loop playsinline >
+  <source src="./static/videos/part_1.mp4"
+          type="video/mp4">
+</video>
+<video controls style="display: block; margin: 0 auto; width: 50%;" poster="" id="block-small" controls muted loop playsinline >
+  <source src="./static/videos/part_2.mp4"
+          type="video/mp4">
+</video>
+
+</section>
+
 
 
 <section class="section">
