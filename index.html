@@ -85,14 +85,14 @@
           <h1 class="title is-1 publication-title">🎨MVPainter<br> Accurate and Detailed 3D Texture Generation via Multi-View Diffusion with Geometric Control</h1>
           <div class="is-size-5 publication-authors">
             <span class="author-block">
-              <a href="https://amap-cvlab.github.io/MV-Painter/">Mingqi Shao</a>,</span>
+              <a href="https://amap-cvlab.github.io/MV-Painter/">Mingqi Shao</a>, </span>
             <span class="author-block">
-              <a href="https://amap-cvlab.github.io/MV-Painter/">Feng Xiong</a></sup>,</span>
+              <a href="https://amap-cvlab.github.io/MV-Painter/">Feng Xiong</a></sup>, </span>
             <span class="author-block">
-              <a href="https://amap-cvlab.github.io/MV-Painter/">Zhaoxu Sun</a></sup>,
+              <a href="https://amap-cvlab.github.io/MV-Painter/">Zhaoxu Sun</a></sup>, 
             </span>
             <span class="author-block">
-              <a href="https://amap-cvlab.github.io/MV-Painter/">Mu Xu</a></sup>,
+              <a href="https://amap-cvlab.github.io/MV-Painter/">Mu Xu</a></sup>
             </span>
 
           </div>
@@ -215,17 +215,19 @@
         <h2 class="title is-3">Method</h2>
         <div class="content has-text-justified">
           <p>
-            At present, mainstream texture generation methods usually use 2D image diffusion models to generate RGB images\cite{bensadoun2024meta,huang2024mv,zhao2025hunyuan3d}, and then map them to 3D surfaces through a projection strategy. However, three core challenges remain unresolved in current approaches: (1)Reference-texture alignment — it is difficult to ensure that the generated texture accurately reflects the visual characteristics of the reference image, especially under varying lighting and occlusions; (2) Geometry-texture consistency — aligning textures precisely with the 3D surface remains challenging; (3) Local texture quality — many methods struggle to produce textures with sufficient details.
+            At present, mainstream texture generation methods usually use 2D image diffusion models to generate RGB images, and then map them to 3D surfaces through a projection strategy. However, three core challenges remain unresolved in current approaches: (1)Reference-texture alignment — it is difficult to ensure that the generated texture accurately reflects the visual characteristics of the reference image, especially under varying lighting and occlusions; (2) Geometry-texture consistency — aligning textures precisely with the 3D surface remains challenging; (3) Local texture quality — many methods struggle to produce textures with sufficient details.
     
             Below is the framework of MV-Painter. First, we apply data filtering and augmentation strategies to ensure that the training data contains sufficient detail and variations in lighting and viewpoint. Then, we leverage a ControlNet-based architecture to generate multi-view texture images that are structurally consistent with the 3D geometry. Finally, we introduce a dedicated PBR extraction module to estimate the basecolor, metallic, and roughness maps, which are projected back onto the 3D mesh to obtain a PBR-textured model.
           </p>
         </div>
+        <img src="./static/images/overview.png" > </img>
+
       </div>
     </div>
-    <div class="hero-body">
-      <img src="./static/images/overview.png" >
-    </img>
-        <h2 class="subtitle has-text-centered">
+
+
+
+    
     <!--/ Abstract. -->
   </div>
 </section>
@@ -238,13 +240,12 @@
   <h2 class="title is-3">Baked Texture Generation</h2>
   </div>
 
-  <video controls style="display: block; margin: 0 auto; width: 50%;" poster="" id="block-small" controls muted loop playsinline >
-    <source src="./static/videos/part_1.mp4"
-            type="video/mp4">
+  <video autoplay muted loop playsinline controls style="display: block; margin: 0 auto; width: 50%;">
+    <source src="./static/videos/part_1.mp4" type="video/mp4">
   </video>
-  <video controls style="display: block; margin: 0 auto; width: 50%;" poster="" id="block-small" controls muted loop playsinline >
-    <source src="./static/videos/part_2.mp4"
-            type="video/mp4">
+  
+  <video autoplay muted loop playsinline controls style="display: block; margin: 0 auto; width: 50%;">
+    <source src="./static/videos/part_2.mp4" type="video/mp4">
   </video>
 
 </section>
@@ -255,38 +256,22 @@
 <h2 class="title is-3">PBR Texture Generation</h2>
 </div>
 
-<video controls style="display: block; margin: 0 auto; width: 50%;" poster="" id="block-small" controls muted loop playsinline >
-  <source src="./static/videos/part_1.mp4"
-          type="video/mp4">
+<video autoplay muted loop playsinline controls style="display: block; margin: 0 auto; width: 50%;">
+  <source src="./static/videos/pbr_1.mp4" type="video/mp4">
 </video>
-<video controls style="display: block; margin: 0 auto; width: 50%;" poster="" id="block-small" controls muted loop playsinline >
-  <source src="./static/videos/part_2.mp4"
-          type="video/mp4">
-</video>
+
+<!-- <video autoplay muted loop playsinline controls style="display: block; margin: 0 auto; width: 50%;">
+  <source src="./static/videos/part_2.mp4" type="video/mp4">
+</video> -->
 
 </section>
 
 
 
-<section class="section">
-  <div class="container is-max-desktop">
-    <div class="columns is-centered has-text-centered">
-      <!-- Compare Aerial Baselines -->
-      <div class="column">
-        <div class="content">
-          <h2 class="title is-3">Street Comparison</h2>
-          <img  style="max-width: 100%;height: auto;"src="./static/images/street.png" >
-        </img>
-          
-        </div>
-      </div>
-      <!--/ Compare Aerial Baselines. -->
-  </div>
-</section>
 
 
 
-
+<!-- 
 <section class="section" id="BibTeX">
   <div class="container is-max-desktop content">
     <h2 class="title">BibTeX</h2>
@@ -299,7 +284,7 @@
       }
     </code></pre>
   </div>
-</section>
+</section> -->
 
 
 <footer class="footer">
