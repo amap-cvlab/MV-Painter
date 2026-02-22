@@ -49,6 +49,7 @@ Fixed the `ValueError: cannot convert float NaN to integer` error by:
 * [2025-04-30] We have released model weights, data processing, trainning, inference scripts.
 
 ## 🔧[Installation](./MVPainter/INSTALL.md)
+Installation guides can be found in [INSTALL.md](./MVPainter/INSTALL.md).
 
 **Important**: After installation, ensure you have proper Blender setup:
 
@@ -138,8 +139,10 @@ accelerate launch --config_file configs/acc/8gpu.yaml train_pbr.py --config conf
 
 ```
 ## 📊[Data Processing](./data_process/README.md)
+Dataprocess guides can be found in [here](./data_process/README.md)
 
 ## 📝[Evaluation](./MVPainter/evaluation/README.md)
+Our human-aligned evaluation system can be found in [here](./MVPainter/evaluation/README.md)
 
 ## Citation
 If you found this repository helpful, please cite our report:
@@ -164,6 +167,6 @@ In this project we use parts of the implementations of the following works:
 
 We thank these work's contributors for open sourcing their research and exploration.
 
-## Star History
+<!-- ## Star History
 
-[![Star History](https://api.star-history.com/svg?repos=amap-cvlab/MV-Painter&type=Date)](https://www.star-history.com/#amap-cvlab/MV-Painter&Date)
+[![Star History](https://api.star-history.com/svg?repos=amap-cvlab/MV-Painter&type=Date)](https://www.star-history.com/#amap-cvlab/MV-Painter&Date) -->

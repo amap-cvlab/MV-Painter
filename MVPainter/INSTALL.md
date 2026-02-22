@@ -36,5 +36,5 @@ Following instructions are tested on Ubuntu 22.04 with CUDA 12.1 and Python 3.10
     ```
     Install opencv for blender
     ```
-    ../blender-4.2.4-linux-x64/4.2/python/bin/python3.11 -m pip install opencv-python
+    ./blender-4.2.4-linux-x64/4.2/python/bin/python3.11 -m pip install opencv-python
     ```

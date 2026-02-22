@@ -4,7 +4,7 @@ MVPainter/outputs/
 MVPainter/results/
 MVPainter/logs
 MVPainter/render_temp
-MVPainter/data
+# MVPainter/data
 MVPainter/mvpainter/custom_rasterizer/build
 MVPainter/mvpainter/custom_rasterizer/custom_rasterizer.egg-info
 ossutil_output
@@ -13,6 +13,9 @@ mvpainter/differentiable_renderer/dist/
 
 # Generated models and outputs
 MVPainter/generated_models/
+# *.png
+# *.glb
+*.pyc
 
 # Build artifacts
 *.egg-info/
